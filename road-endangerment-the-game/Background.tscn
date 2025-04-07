@@ -32,3 +32,4 @@ offset_right = 122.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1wyx0")
+expand_mode = 4
