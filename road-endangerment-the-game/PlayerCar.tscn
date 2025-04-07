@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1lsuqxqrk5uc"]
+
+[ext_resource type="Texture2D" uid="uid://qieo1yegv01y" path="res://redcar.png" id="1_0hlxl"]
+[ext_resource type="Script" path="res://player_car_movement.gd" id="1_aws38"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6xkmi"]
+radius = 27.0
+height = 129.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_aws38")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_0hlxl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("CapsuleShape2D_6xkmi")
