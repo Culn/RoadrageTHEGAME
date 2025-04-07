@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwjrmxnckacw8"]
+
+[ext_resource type="Texture2D" uid="uid://eebgp7xf1l17" path="res://download (2).png" id="1_8ckt0"]
+[ext_resource type="Texture2D" uid="uid://n8g7vhtt6h0n" path="res://download (3).png" id="2_hx6xn"]
+[ext_resource type="Texture2D" uid="uid://dpgadbvibfx50" path="res://download (4).png" id="3_ippp7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_17uff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8ckt0")
+}],
+"loop": true,
+"name": &"greicar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hx6xn")
+}],
+"loop": true,
+"name": &"orankar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ippp7")
+}],
+"loop": true,
+"name": &"supakar",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrbek"]
+radius = 93.0
+height = 424.0
+
+[node name="mobcar" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = -3.14159
+sprite_frames = SubResource("SpriteFrames_17uff")
+animation = &"supakar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_hrbek")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
