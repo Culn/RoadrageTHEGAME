@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://kr6r18ep4ivf"]
+[gd_scene load_steps=6 format=3 uid="uid://kr6r18ep4ivf"]
 
 [ext_resource type="Texture2D" uid="uid://b28yn2egl0xd3" path="res://3laneroad.png" id="1_1wyx0"]
 [ext_resource type="Shader" path="res://scrollingroad.gdshader" id="1_hv1hj"]
+[ext_resource type="AudioStream" uid="uid://dn5x70fvk1nq6" path="res://Chasing the Wind _ Metal Gear Rising_ Revengeance Soundtrack.mp3" id="3_kjqic"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nkef3"]
 shader = ExtResource("1_hv1hj")
@@ -33,3 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1wyx0")
 expand_mode = 4
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_kjqic")
+volume_db = -0.5
