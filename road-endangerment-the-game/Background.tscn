@@ -10,7 +10,7 @@ shader = ExtResource("1_hv1hj")
 shader = ExtResource("1_hv1hj")
 
 [node name="Control" type="Control"]
-texture_repeat = 1
+texture_repeat = 2
 material = SubResource("ShaderMaterial_nkef3")
 layout_mode = 3
 anchors_preset = 15
@@ -27,8 +27,8 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -122.0
-offset_right = 122.0
+offset_left = -197.0
+offset_right = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_1wyx0")
