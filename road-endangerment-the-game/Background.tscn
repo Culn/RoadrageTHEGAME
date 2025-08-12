@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://kr6r18ep4ivf"]
+[gd_scene load_steps=8 format=3 uid="uid://kr6r18ep4ivf"]
 
 [ext_resource type="Texture2D" uid="uid://b28yn2egl0xd3" path="res://3laneroad.png" id="1_1wyx0"]
 [ext_resource type="Shader" path="res://scrollingroad.gdshader" id="1_hv1hj"]
+[ext_resource type="Script" path="res://background.gd" id="2_ao6e6"]
 [ext_resource type="AudioStream" uid="uid://dn5x70fvk1nq6" path="res://Chasing the Wind _ Metal Gear Rising_ Revengeance Soundtrack.mp3" id="3_kjqic"]
 [ext_resource type="PackedScene" uid="uid://d1lsuqxqrk5uc" path="res://PlayerCar.tscn" id="4_2xwmb"]
 
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_ao6e6")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_repeat = 2
@@ -41,3 +43,6 @@ stream = ExtResource("3_kjqic")
 volume_db = -0.5
 
 [node name="Area2D" parent="." instance=ExtResource("4_2xwmb")]
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(580, 560)

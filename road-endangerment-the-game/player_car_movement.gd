@@ -27,3 +27,8 @@ func _process(delta: float):
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+	
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false

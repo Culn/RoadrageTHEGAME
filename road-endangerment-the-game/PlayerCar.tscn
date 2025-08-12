@@ -7,7 +7,7 @@
 radius = 27.0
 height = 129.0
 
-[node name="Area2D" type="Area2D"]
+[node name="Player" type="Area2D"]
 script = ExtResource("1_aws38")
 metadata/_edit_group_ = true
 
